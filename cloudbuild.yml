@@ -1,0 +1,11 @@
+steps:
+- name: 'teracy/angular-cli'
+  volumes:
+  - name: 'dist'
+    path: '/dist'
+  args: ['build', '--prod', '']
+  
+
+- name: 'node'
+  entrypoint: 'npm'
+  args: ['install','-g','firebase-tools' ]
