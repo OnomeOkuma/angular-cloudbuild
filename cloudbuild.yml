@@ -1,11 +1,8 @@
 steps:
 - name: 'teracy/angular-cli'
-  volumes:
-  - name: 'dist'
-    path: '/dist'
-  args: ['build', '--prod', '']
+  args: ['build', '--prod']
   
+- name: 'andreysenov/firebase-tools'
+  args: ['deploy', '--only', 'hosting', '--token $_FIREBASE_TOKEN']
 
-- name: 'node'
-  entrypoint: 'npm'
-  args: ['install','-g','firebase-tools' ]
+
