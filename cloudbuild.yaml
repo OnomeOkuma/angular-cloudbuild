@@ -1,8 +1,10 @@
 steps:
 - name: 'teracy/angular-cli'
+  entrypoint: 'ng'
   args: ['build', '--prod']
   
 - name: 'andreysenov/firebase-tools'
+  entrypoint: 'firebase'
   args: ['deploy', '--only', 'hosting', '--token $_FIREBASE_TOKEN']
 
 
