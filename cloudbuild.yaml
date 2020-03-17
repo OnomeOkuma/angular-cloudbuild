@@ -1,0 +1,8 @@
+steps:
+- name: 'teracy/angular-cli'
+  args: ['build', '--prod']
+  
+- name: 'andreysenov/firebase-tools'
+  args: ['deploy', '--only', 'hosting', '--token $_FIREBASE_TOKEN']
+
+
