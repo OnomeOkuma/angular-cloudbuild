@@ -1,7 +1,7 @@
 steps:
 - name: 'teracy/angular-cli'
   entrypoint: 'ng'
-  args: ['build', '--prod']
+  args: ['--version']
   
 - name: 'andreysenov/firebase-tools'
   entrypoint: 'firebase'
