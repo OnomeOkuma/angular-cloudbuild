@@ -1,5 +1,9 @@
 steps:
 - name: 'teracy/angular-cli'
+  entrypoint: 'npm'
+  args: ['install']
+
+- name: 'teracy/angular-cli'
   entrypoint: 'ng'
   args: ['--version']
   
