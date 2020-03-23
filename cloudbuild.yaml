@@ -1,12 +1,6 @@
 steps:
-- name: 'teracy/angular-cli'
-  entrypoint: 'npm'
-  args: ['install']
+- name: 'okumaonome/angular-cli'
 
-- name: 'teracy/angular-cli'
-  entrypoint: 'ng'
-  args: ['--version']
-  
 - name: 'andreysenov/firebase-tools'
   entrypoint: 'firebase'
   args: ['deploy', '--only', 'hosting', '--token $_FIREBASE_TOKEN']
