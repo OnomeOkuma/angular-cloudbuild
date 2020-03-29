@@ -4,6 +4,8 @@ steps:
 - name: 'okumaonome/angular-cli'
   args: ['ng', 'build', '--prod']
 - name: 'okumaonome/firebase-tools'
+  args: ['ls', '-l']
+- name: 'okumaonome/firebase-tools']
   args: ['deploy', '--only', 'hosting', '--token $_FIREBASE_TOKEN']
 
 
